@@ -22,3 +22,18 @@ thunder client
 get     http://localhost:3000/transactions
 
 
+
+///////////////////////////////////////////////////////////
+conectar banco de dados firestone com nodejs e express
+
+no site https://console.firebase.google.com/
+visão geral => configurações => contas de serviços
+clicar em GERAR NOVA CHAVE PRIVADA
+arquivo será gerado e deve ser salvo na pasta do projeto: serviceAccountKey.json
+instalar o pacote firebase admin: npm i firebase-admin
+importar o pacote instalado no arquivo index.js
+copiar as informações do firebase console no arquivo index.js
+criar a chamada para listar os itens que constam no firebase
+
+
+
