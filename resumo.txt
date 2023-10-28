@@ -1,0 +1,24 @@
+inicializar o projeto
+npm init -y
+
+instalar biblioteca
+npm install express
+
+criar o arquivo index.js e importar a biblioteca express
+acrescentar no arquivo package.json 
+"license": "ISC",
+"type": "module",
+
+REST API    http://api.controle-de-gastos.com/transactions
+GET         http://api.controle-de-gastos.com/transactions
+GET         http://api.controle-de-gastos.com/transactions/:id
+POST        http://api.controle-de-gastos.com/transactions
+PUT         http://api.controle-de-gastos.com/transactions/:id
+DELETE      http://api.controle-de-gastos.com/transactions/:id
+
+executar a aplicação: node index.js
+instalar plugin vccode para chamadas http
+thunder client
+get     http://localhost:3000/transactions
+
+
