@@ -12,7 +12,7 @@ export async function authenticateToken(request, response, next) {
     try {
         decodedIdToken = await admin.auth().verifyIdToken(jwt, true);
     } catch (e) {
-        response.status(401).json({message: 'Usuário não autorizado !!!'});
+        response.status(401).json({message: 'Token não encontrado !!!'});
         return;
     }
 

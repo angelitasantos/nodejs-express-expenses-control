@@ -78,3 +78,22 @@ retirar do arquivo index.js a parte de rota e controle
 camada de modelo
 criar o arquivo models.js (logica e regras do negocio)
 retirar do arquivo controllers.js a logica e a regra do negocio
+
+
+
+///////////////////////////////////////////////////////////
+camada de repositório
+criar o arquivo repository.js (acesso aos dados)
+retirar do arquivo models.js
+
+
+
+///////////////////////////////////////////////////////////
+controllers => models
+models => repository
+repository => models
+models => controllers
+controllers => frontend
+
+
+
