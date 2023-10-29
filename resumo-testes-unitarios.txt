@@ -24,3 +24,16 @@ incluir no package.json uma variavel para testar automaticamente ao alterar algo
 
 rodar o script
 npm run test:dev
+
+
+
+///////////////////////////////////////////////////////////
+criando testes unitarios automaticos
+instalar a biblioteca para analisar o comportamento dos testes
+npm install --save-dev @babel/plugin-transform-modules-commonjs
+informar no arquivo package.json o comportamento dos testes
+
+criar uma pasta errors para salvar os erros
+e alterar no arquivo models e model.spec.js
+
+configurar para o repositorio não ser testado na teste models
