@@ -66,3 +66,9 @@ incluir no arquivo a parte de autenticação do arquivo index.js
 
 
 ///////////////////////////////////////////////////////////
+Camadas de routers e controllers com NodeJs e Express
+criar a pasta transactions
+criar o arquivo controller.js (receber requisição do servidor / retornar resposta)
+criar o arquivo routers.js (rotas da aplicação)
+retirar do arquivo index.js a parte de rota e controle 
+
