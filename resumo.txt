@@ -72,3 +72,9 @@ criar o arquivo controller.js (receber requisição do servidor / retornar respo
 criar o arquivo routers.js (rotas da aplicação)
 retirar do arquivo index.js a parte de rota e controle 
 
+
+
+///////////////////////////////////////////////////////////
+camada de modelo
+criar o arquivo models.js (logica e regras do negocio)
+retirar do arquivo controllers.js a logica e a regra do negocio
