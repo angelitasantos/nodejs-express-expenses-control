@@ -1,0 +1,26 @@
+biblioteca utilizada
+jest
+https://jestjs.io/pt-BR/docs/getting-started
+
+instalar
+npm install --save-dev jest
+
+rodar o script
+npm run test
+
+trocar no arquivo package.json a linha abaixo
+  "scripts": {
+    "test": "jest"
+  },
+
+criar a pasta __tests__ dentro da pasta transactions
+criar o arquivo model.spec.js
+
+incluir no package.json uma variavel para testar automaticamente ao alterar algo no teste
+ "scripts": {
+    "test": "jest",
+    "test:dev": "jest --watch=true"
+  },
+
+rodar o script
+npm run test:dev
