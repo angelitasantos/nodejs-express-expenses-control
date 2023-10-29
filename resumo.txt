@@ -57,3 +57,12 @@ incluir o filtro por usuario na requisição das transações no index.js
 
 
 
+///////////////////////////////////////////////////////////
+construir middleware de autenticação JWT com express
+criar a pasta middlewares
+criar o arquivo authenticate-jwt.js
+incluir no arquivo a parte de autenticação do arquivo index.js
+
+
+
+///////////////////////////////////////////////////////////

@@ -1,5 +1,6 @@
 import express from 'express';
 import admin from 'firebase-admin';
+import { authenticateToken } from './middlewares/authenticate-jwt.js';
 
 
 // REST API http://api.controle-de-gastos.com/transactions
@@ -11,24 +12,10 @@ admin.initializeApp({
 
 
 // GET      http://api.controle-de-gastos.com/transactions
-app.get('/transactions', async (request, response) => {
-    const jwt = request.headers.authorization;
-    if (!jwt) {
-        response.status(401).json({message: 'Usuário não autorizado !!!'});
-        return;
-    }
-
-    let decodedIdToken = "";
-    try {
-        decodedIdToken = await admin.auth().verifyIdToken(jwt, true);
-    } catch (e) {
-        response.status(401).json({message: "Usuário não autorizado !!!"});
-        return;
-    }
-
+app.get('/transactions', authenticateToken, (request, response) => {
     admin.firestore()
         .collection('transactions')
-        .where('user.uid', '==', decodedIdToken.sub)
+        .where('user.uid', '==', request.user.uid)
         .orderBy('date', 'desc')
         .get()
         .then(snapshot => {
@@ -41,4 +28,7 @@ app.get('/transactions', async (request, response) => {
 })
 
 app.listen(3000, () => console.log('API rest iniciada em http://localhost:3000'))
+
+
+
 
