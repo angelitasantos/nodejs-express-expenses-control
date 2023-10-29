@@ -37,3 +37,23 @@ criar a chamada para listar os itens que constam no firebase
 
 
 
+///////////////////////////////////////////////////////////
+identificar o usuário com firebase e JWT
+home.js da aplicação
+pegar o idToken do usuario 
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        ===== user.getIdToken().then(token => console.log(token)); ====
+        findTransactions(user);
+    }
+})
+
+pegar o token e analisar a estrutura no site abaixo
+https://jwt.io/
+
+incluir o cabeçalho da requisição JWT no index.js
+incluir a verificação se o JWT é válido no index.js
+incluir o filtro por usuario na requisição das transações no index.js
+
+
+
